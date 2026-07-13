@@ -5,16 +5,10 @@ const education: IEducation.Payload = {
 
   list: [
     {
-      title: 'University of Open Source',
-      subTitle: 'PhD in System Engineering (Honorary)',
-      startedAt: '1991-03',
-      // endedAt: '2010-02',
-    },
-    {
-      title: 'Antarctica High School',
-      subTitle: 'Graduated',
-      startedAt: '1989-03',
-      endedAt: '1991-02',
+      title: '삼성 청년 소프트웨어 아카데미 (SSAFY)',
+      subTitle: '수료 · 우수상 — 캘린더 서비스 팀장(프론트·백엔드·인프라 전담)',
+      startedAt: '2020-01',
+      endedAt: '2020-12',
     },
   ],
 };

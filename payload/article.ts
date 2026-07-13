@@ -5,12 +5,9 @@ const article: IArticle.Payload = {
 
   list: [
     {
-      content: 'Recipient of the "Open Source Hall of Fame" award in 2015.',
-      href: '#',
-    },
-    {
-      content: 'Featured on the cover of "Linux Monthly" as the face of Linux (2016, 2018, 2020).',
-      href: '#',
+      content:
+        '기술 블로그 운영 — 트랜잭션 격리 수준, Redis 내부 구조, 이벤트 드리븐 아키텍처, QA 자동화 등 실무 기반 글 연재',
+      href: 'https://blog.hhm.io.kr/blog',
     },
   ],
 };
