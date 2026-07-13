@@ -28,9 +28,11 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
           {payload.contents.map((content, index) => (
             <p key={index.toString()}>{content}</p>
           ))}
-          <p className="text-right" style={Style.sign}>
-            {payload.sign}
-          </p>
+          {payload.sign && (
+            <p className="text-right" style={Style.sign}>
+              {payload.sign}
+            </p>
+          )}
         </Col>
       </Row>
     </div>
