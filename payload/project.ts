@@ -25,8 +25,8 @@ const project: IProject.Payload = {
             'k6 부하테스트로 동시 100요청에서 정확히 좌석 수만큼만 성공(중복·초과 0) — 정합성을 측정으로 검증',
         },
         {
-          content: 'https://github.com/ghals5737/ticketing',
-          href: 'https://github.com/ghals5737/ticketing',
+          content: 'https://github.com/Kimseungzzang/ticketing',
+          href: 'https://github.com/Kimseungzzang/ticketing',
         },
       ],
     },

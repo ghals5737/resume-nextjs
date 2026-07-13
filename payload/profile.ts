@@ -1,5 +1,4 @@
 import { faEnvelope, faPhone, faPen } from '@fortawesome/free-solid-svg-icons';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { IProfile } from '../component/profile/IProfile';
@@ -34,10 +33,6 @@ const profile: IProfile.Payload = {
       icon: faPen,
     },
   ],
-  notice: {
-    title: '세부 트러블슈팅·설계 배경은 경력기술서(PDF)에 있습니다. 이메일로 요청 주시면 전달드립니다.',
-    icon: faBell,
-  },
 };
 
 export default profile;
