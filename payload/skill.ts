@@ -40,7 +40,7 @@ const observability: ISkill.Skill = {
 };
 
 const skill: ISkill.Payload = {
-  disable: false,
+  disable: true,
   skills: [backend, database, infra, observability],
 };
 
