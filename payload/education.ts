@@ -10,6 +10,12 @@ const education: IEducation.Payload = {
       startedAt: '2020-01',
       endedAt: '2020-12',
     },
+    {
+      title: '충북대학교',
+      subTitle: '정보통신공학과 학사 졸업',
+      startedAt: '2013-03',
+      endedAt: '2021-02',
+    },
   ],
 };
 
