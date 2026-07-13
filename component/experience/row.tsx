@@ -93,9 +93,9 @@ export default function ExperienceRow({
           <Col sm={12} md={9}>
             <i style={Style.gray}>{position.title}</i>
             <ul className="pt-2">
-              {position.descriptions.map((description, descIndex) => (
-                <li key={descIndex.toString()}>{description}</li>
-              ))}
+              {position.descriptions.map((description, descIndex) =>
+                renderDescription(description, descIndex),
+              )}
               {createSkillKeywords(position.skillKeywords)}
             </ul>
           </Col>
@@ -103,6 +103,55 @@ export default function ExperienceRow({
       ))}
     </div>
   );
+}
+
+
+function renderDescription(description: string, index: number) {
+  const key = index.toString();
+  if (description.startsWith('## ')) {
+    return (
+      <li
+        key={key}
+        style={{
+          listStyle: 'none',
+          marginLeft: '-1.2rem',
+          marginTop: '1.1rem',
+          fontWeight: 600,
+          color: '#1F3A5F',
+        }}
+      >
+        {description.substring(3)}
+      </li>
+    );
+  }
+  if (description.startsWith('> ')) {
+    return (
+      <li key={key} style={{ listStyle: 'none', marginLeft: '-1.2rem', color: 'gray' }}>
+        {description.substring(2)}
+      </li>
+    );
+  }
+  if (description.startsWith('→')) {
+    return (
+      <li
+        key={key}
+        style={{
+          listStyle: 'none',
+          marginLeft: '-1.2rem',
+          marginTop: '0.3rem',
+          marginBottom: '0.2rem',
+          padding: '2px 10px',
+          fontWeight: 500,
+          color: '#1F3A5F',
+          backgroundColor: '#F5F7FA',
+          borderLeft: '3px solid #2E5C8A',
+        }}
+      >
+        {description}
+      </li>
+    );
+  }
+  return <li key={key}>{description}</li>;
 }
 
 function createOverallWorkingPeriod(positions: PositionWithDates[]) {
