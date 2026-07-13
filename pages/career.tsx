@@ -4,7 +4,6 @@ import { Container } from 'reactstrap';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { Career } from '../component/career';
-import { Footer } from '../component/footer';
 import { Profile } from '../component/profile';
 import { Style } from '../component/common/Style';
 import Payload from '../payload';
@@ -31,7 +30,6 @@ function CareerPage() {
           <h2 style={Style.blue}>경력기술서</h2>
         </div>
         <Career.Component payload={career} />
-        <Footer.Component payload={Payload.footer} />
       </Container>
     </>
   );

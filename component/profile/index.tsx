@@ -22,17 +22,26 @@ export const Profile = {
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const { image, contact, name, notice } = payload;
   return (
-    <div className="mt-5">
-      <Row>
-        <Col md={3} sm={12}>
-          {image && <ProfileImage src={image} />}
-        </Col>
-        <Col md={9} sm={12}>
-          {createNameArea(name)}
-          {createProfileContactMap(contact)}
-          {createNoticeArea(notice)}
-        </Col>
-      </Row>
+    <div
+      className="mt-5"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: '1.5rem',
+        flexWrap: 'nowrap',
+      }}
+    >
+      <div style={{ flex: 1, minWidth: 0 }}>
+        {createNameArea(name)}
+        {createProfileContactMap(contact)}
+        {createNoticeArea(notice)}
+      </div>
+      {image && (
+        <div style={{ flexShrink: 0 }}>
+          <ProfileImage src={image} />
+        </div>
+      )}
     </div>
   );
 }
@@ -40,7 +49,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 function createNameArea(name: Payload['name']) {
   return (
     <Row>
-      <Col className="text-center text-md-left">
+      <Col className="text-left">
         <h1 style={Style.blue}>
           {name.title} <small>{name.small || ''}</small>
         </h1>
