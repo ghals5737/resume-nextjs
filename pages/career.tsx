@@ -26,7 +26,7 @@ function CareerPage() {
         <div className="nav-resume-links text-right mt-3">
           <a href="./">← 이력서로</a>
         </div>
-        <Profile.Component payload={Payload.profile} />
+        <Profile.Component payload={{ ...Payload.profile, image: undefined }} />
         <div className="mt-4">
           <h2 style={Style.blue}>경력기술서</h2>
         </div>

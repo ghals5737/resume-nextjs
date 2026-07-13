@@ -25,7 +25,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
     <div className="mt-5">
       <Row>
         <Col md={3} sm={12}>
-          <ProfileImage src={image} />
+          {image && <ProfileImage src={image} />}
         </Col>
         <Col md={9} sm={12}>
           {createNameArea(name)}
