@@ -26,6 +26,9 @@ function Yosume() {
         <link rel="shortcut icon" href={Payload._global.favicon} />
       </Head>
       <Container style={Style.global}>
+        <div className="nav-resume-links text-right mt-3">
+          <a href="./career">경력기술서 →</a>
+        </div>
         <Profile.Component payload={Payload.profile} />
         <Introduce.Component payload={Payload.introduce} />
         <Skill.Component payload={Payload.skill} />

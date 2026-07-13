@@ -16,8 +16,14 @@ const project: IProject.Payload = {
           content:
             'Kafka·Redis를 매니지드에 의존하지 않고 직접 구현(MyKafka·MyRedis) — "왜 이 구조인가"를 코드로 검증',
           descriptions: [
-            { content: 'length-prefix 와이어 프로토콜 · segment + sparse index · zero-copy(transferTo)' },
-            { content: '대기열 3대 다중화 시 초과 입장 race를 리더 선출(SET NX)로 해결 — activeCount ≤ slot 보장' },
+            {
+              content:
+                'length-prefix 와이어 프로토콜 · segment + sparse index · zero-copy(transferTo)',
+            },
+            {
+              content:
+                '대기열 3대 다중화 시 초과 입장 race를 리더 선출(SET NX)로 해결 — activeCount ≤ slot 보장',
+            },
           ],
         },
         {

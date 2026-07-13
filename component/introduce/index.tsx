@@ -1,8 +1,6 @@
-import { Row, Col, Badge } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { PropsWithChildren } from 'react';
-import { DateTime } from 'luxon';
 import { Style } from '../common/Style';
-import Util from '../common/Util';
 import { IIntroduce } from './IIntroduce';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
 

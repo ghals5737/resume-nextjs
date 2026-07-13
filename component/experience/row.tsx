@@ -105,7 +105,6 @@ export default function ExperienceRow({
   );
 }
 
-
 function renderDescription(description: string, index: number) {
   const key = index.toString();
   if (description.startsWith('## ')) {

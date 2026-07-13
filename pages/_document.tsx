@@ -20,6 +20,19 @@ export default class ResumeDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Parisienne&display=swap"
             rel="stylesheet"
           />
+          <style
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+                @media print {
+                  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+                  li, .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+                  .nav-resume-links { display: none !important; }
+                  img { max-width: 100% !important; break-inside: avoid; }
+                }
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />
